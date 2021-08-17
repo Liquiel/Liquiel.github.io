@@ -1,0 +1,88 @@
+<!-- Ejemplo #4: Ejemplo que permite ingresar en un formulario datos de un libro que luego son almacenados
+en propiedades de un objeto libro definido con el objeto Object de JavaScript. Se verifica que los datos
+obtenidos sean correctos, se limpian los campos del formulario y finalmente se construye una tabla HTML
+con uno de los métodos del objeto donde se muestran los datos ya almacenados en las propiedades de ese
+objeto creado. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Creación de objetos</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font.css" />
+<link rel="stylesheet" href="css/masked.css" />
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+</head>
+<body>
+<div class="container">
+
+<h1>Información del libro</h1>
+</div>
+<div class="row">
+<div class="col s12">
+<form action="javascript:void(0)" name="frmbook" id="frmbook" class="col s12">
+<div class="input-field">
+	<i class="material-icons prefix">person_pin</i>
+	<label for="autor">Nombre autor</label>
+	<input type="text" name="txtautor" id="autor" required maxlength="60" placeholder="Nombre autor" />
+	
+</div>
+<div class="input-field">
+	<i class="material-icons prefix">person_pin</i>
+	<label for="autor">Apellido autor</label>
+	<input type="text" name="txtape" id="ape" required maxlength="60" placeholder="Apellido del autor" />	
+</div>
+<div class="input-field">
+
+	<i class="material-icons prefix">book</i>
+	<label for="autor">Título</label>
+	<input type="text" name="txtitulo" id="titulo" required maxlength="60" placeholder="Título libro" />	
+</div>
+<div class="input-field">
+
+	<i class="material-icons prefix">book</i>
+	<label for="autor">Categoría</label>
+	<input type="text" name="txtcat" id="cat" required maxlength="60" placeholder="Categoría" />	
+</div>
+
+<div class="input-field">
+
+	<i class="material-icons prefix">attach_money</i>
+	<label for="autor">Precio</label>
+	<input name="txtprecio" id="precio" required maxlength="60" type="number" required="required" placeholder="Precio ($)" />	
+</div>
+
+<input type="file" id="file" name="img" accept="image/*" onchange="mostrar()"/>
+<br>
+<img id="img"/>
+<br><br>
+<div class="center-align">
+<button type="submit" name="mostrar" id="mostrar" class="btn btn-success" />
+<i class="material-icons right">send</i>
+
+Agregar
+</button>
+</div>
+</form>
+</div>
+</div>
+<div class="row">
+<div id="infolibro"></div>
+</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></sc
+ript>
+<!-- Para la funcionalidad del elemento select con materialized -->
+<script>
+$(document).ready(function() {
+$('select').material_select();
+});
+</script>
+<script src="js/libro.js"></script>
+</html>

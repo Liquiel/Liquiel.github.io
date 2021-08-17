@@ -1,0 +1,9 @@
+body{
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    
+}
+.row{
+    display: flex;
+}
